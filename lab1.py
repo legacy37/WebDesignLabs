@@ -59,10 +59,14 @@ print(2*(a1+a2))
 print("1.14 число пи")
 print(round(math.pi,3))
 print("1.15 введите число рублей копеек и количество пирожков")
-a1 = int(input())
-a2 = int(input())
-n = int(input())
-print(math.floor(a1*n+(a2*n)/100)," ", (a2*n/100-math.floor(a2*n/100))*100)
+a = int(input("Введите число рубелй"))
+b = int(input("Введите число копеек"))
+n = int(input("Введите число пирожков"))
+p=a+b/100
+if 10<int((n*p%1)*100)<100:
+    print(int(n*p%100), int((n*p%1)*100))
+else:
+    print(int(n * p % 100), int((n * p % 1) * 10))
 print("1.16 кратность трём Введите float число")
 a = float(input())
 b = int(a)
