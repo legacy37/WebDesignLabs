@@ -1,0 +1,199 @@
+print("5.1")
+a, b = map(float, input().split())
+print(a if a > b else b)
+print("Задание 5.2")
+word = input().lower()
+if word == word[::-1]:
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
+print("Задание 5.3")
+a, b = map(int, input().split())
+if a % b == 0:
+    print(a // b)
+else:
+    print(f"{a} на {b} нацело не делится")
+print("Задание 5.4")
+a, b, c = map(int, input().split())
+if a**2 + b**2 == c**2:
+    print("Yes")
+else:
+    print("No")
+print("Задание 5.5")
+number = int(input())
+if number % 10 == 7:
+    print("Yes")
+else:
+    print("No")
+print("Задание 5.6")
+word = input().lower()
+if 't' in word and 'h' in word and 'o' in word:
+    print("Yes")
+else:
+    print("No")
+print("Задание 5.7")
+cities = input().split()
+if 'Москва' in cities:
+    cities.remove('Москва')
+print(' '.join(cities))
+print("Задание 5.8")
+a, b, c, d = map(int, input().split())
+if (c + 2 <= a and d + 2 <= b) or (c + 2 <= b and d + 2 <= a):
+    print("Yes")
+else:
+    print("No")
+print("Задание 5.9")
+number = input()
+if sum(map(int, number[:3])) == sum(map(int, number[3:])):
+    print("Yes")
+else:
+    print("No")
+print("Задание 5.10")
+time = float(input())
+cycle = time % 5
+if cycle < 3:
+    print("green")
+else:
+    print("red")
+print("Задание 5.11")
+choice = int(input())
+if choice == 1:
+    print("Введение в Python")
+elif choice == 2:
+    print("Строки и списки")
+elif choice == 3:
+    print("Условные операторы")
+elif choice == 4:
+    print("Циклы")
+elif choice == 5:
+    print("Словари, кортежи и множества")
+elif choice == 6:
+    print("Выход")
+print("Задание 5.12")
+a, b, c = map(int, input().split())
+if a <= b and a <= c:
+    print(a)
+elif b <= a and b <= c:
+    print(b)
+else:
+    print(c)
+print("Задание 5.13")
+weight = float(input())
+if weight <= 60:
+    print(1)
+elif weight <= 64:
+    print(2)
+elif weight <= 69:
+    print(3)
+else:
+    print(4)
+print("Задание 5.14")
+day = int(input())
+if day == 1:
+    print("понедельник")
+elif day == 2:
+    print("вторник")
+elif day == 3:
+    print("среда")
+elif day == 4:
+    print("четверг")
+elif day == 5:
+    print("пятница")
+elif day == 6:
+    print("суббота")
+elif day == 7:
+    print("воскресенье")
+print("Задание 5.15")
+month = int(input())
+if month in [1, 3, 5, 7, 8, 10, 12]:
+    print(31)
+elif month in [4, 6, 9, 11]:
+    print(30)
+else:
+    print(28)
+print("Задание 5.16")
+d, m = map(int, input().split())
+days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+if d == 1:
+    prev_m = m - 1
+    prev_d = days_in_month[prev_m - 1]
+else:
+    prev_m = m
+    prev_d = d - 1
+
+if d == days_in_month[m - 1]:
+    next_m = m + 1 if m < 12 else 1
+    next_d = 1
+else:
+    next_m = m
+    next_d = d + 1
+
+print(f"{prev_d:02d}.{prev_m:02d} {next_d:02d}.{next_m:02d}")
+print("Задание 5.17")
+k = int(input())
+days_of_week = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
+day_index = (k - 1) % 7
+print(days_of_week[day_index])
+print("Задание 5.18")
+a = float(input())
+b = float(input())
+max_value = a if a > b else b
+print(max_value)
+print("Задание 5.19")
+number = int(input())
+result = "a multiple of 5" if number % 5 == 0 else "not a multiple of 5"
+print(f"{number} is {result}")
+print("Задание 5.20")
+word = input().lower()
+result = "Palindrome" if word == word[::-1] else "Not a Palindrome"
+print(result)
+print("Задание 5.21")
+number = int(input())
+result = True if number == 1 else False
+print(result)
+print("Задание 5.22")
+seconds = int(input())
+next_second = 0 if seconds == 59 else seconds + 1
+print(next_second)
+print("Задание 5.23")
+temp = int(input())
+scale = input().upper()
+
+if scale == 'C':
+    result = int(temp * 1.8 + 32)
+elif scale == 'F':
+    result = int((temp - 32) / 1.8)
+else:
+    result = "Неправильно введены градусы"
+
+print(result)
+print("Задание 5.24")
+letter = input().lower()
+vowels_ru = "аоуиыэеёюя"
+vowels_en = "aeiou"
+consonants_ru = "бвгджзйклмнпрстфхцчшщ"
+consonants_en = "bcdfghjklmnpqrstvwxyz"
+
+if letter in vowels_ru or letter in vowels_en:
+    print("Гласная")
+elif letter in consonants_ru or letter in consonants_en:
+    print("Согласная")
+elif letter in "ъь":
+    print(letter)
+else:
+    print("Неправильно введена буква")
+print("Задание 5.25")
+size = input().upper()
+age = int(input())
+
+if size == 'М':
+    human_age = 16 * age + 31 if age > 2 else 10.5 * age
+elif size == 'С':
+    human_age = 12 * age + 31 if age > 2 else 10.5 * age
+elif size == 'К':
+    human_age = 8 * age + 31 if age > 2 else 10.5 * age
+else:
+    human_age = "Неправильно введен размер"
+
+print(human_age)
