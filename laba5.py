@@ -1,3 +1,4 @@
+import math
 print("5.1")
 a, b = map(float, input().split())
 print(a if a > b else b)
@@ -183,27 +184,27 @@ elif letter in "ъь":
     print(letter)
 else:
     print("Неправильно введена буква")
- import math
-
- size = input("Введите размер собаки: ").upper()
- age = int(input("Введите возраст собаки: "))
- if age==1:
-     print(15)
- if size=="М":
-     print(24 + (age-2)*4)
- if size=="С":
-     if 6<=age<=10:
-         print(round(45.8796*math.log(age) - 40.21))
-     elif 10<age<=16:
-         print(round(57.446*math.log(age) - 72.275))
-     else:
-         print(24 + (age-2)*4)
- if size=="К":
-     if (age==16):
-         print(120)
-     if 6<=age<=10:
-         print(round(41.11*math.log(age) - 28.66))
-     elif 10<age<=15:
-         print(round(67.71*math.log(age) - 90.35))
-     elif 1<=age<=5:
-         print(24 + (age-2)*4)
+print("5.25")
+size = input("Введите размер собаки: ")
+size = size.upper()
+age = int(input("Введите возраст собаки: "))
+if age==1:
+    print(15)
+if size=="М":
+    print(24 + (age-2)*4)
+if size=="С":
+    if 6<=age<=10:
+        print(round(45.8796*math.log(age) - 40.21))
+    elif 10<age<=16:
+        print(round(57.446*math.log(age) - 72.275))
+    else:
+        print(24 + (age-2)*4)
+if size=="К":
+    if (age==16):
+        print(120)
+    if 6<=age<=10:
+        print(round(41.11*math.log(age) - 28.66))
+    elif 10<age<=15:
+        print(round(67.71*math.log(age) - 90.35))
+    elif 1<=age<=5:
+        print(24 + (age-2)*4)
